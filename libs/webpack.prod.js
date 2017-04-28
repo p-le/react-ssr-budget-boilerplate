@@ -5,6 +5,9 @@ const baseConfig = require('./webpack-base-config.js');
 const rootDir = path.resolve(__dirname, '../');
 
 module.exports = baseConfig.map(config => merge(config, {
+  entry: {
+    app: [ './src/client/index.js' ]
+  },
   plugins: [
     new webpack.LoaderOptionsPlugin({
       minimize: true,

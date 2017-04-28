@@ -1,19 +1,23 @@
-import 'babel-polyfill';
-
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import App from './containers/App';
-import counterApp from './reducers';
+import { AppContainer } from 'react-hot-loader';
 
-const preloadedState = window.__PRELOADED_STATE__;
-delete window.__PRELOADED_STATE__;
-const store = createStore(counterApp, preloadedState);
+import App from './containers/App';
 
 render(
-  <Provider store={store}>
+  <AppContainer>
     <App />
-  </Provider>,
+  </AppContainer>,
   document.getElementById('root')
 );
+
+if (module.hot) {
+  module.hot.accept('./containers/App', () => {
+    render(
+      <AppContainer>
+        <App />
+      </AppContainer>,
+      document.getElementById('root')
+    );
+  });
+}
