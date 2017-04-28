@@ -1,0 +1,47 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [ "react" ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "arrow-body-style": "error",
+    "arrow-parens": "error",
+    "arrow-spacing": "error",
+    "eqeqeq": "error",
+    "generator-star-spacing": "error",
+    "no-duplicate-imports": "error",
+    "no-eq-null": "error",
+    "no-undefined": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-constructor": "error",
+    "no-useless-rename": "error",
+    "no-var": "error",
+    "object-shorthand": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "no-case-declarations": 0,
+    "rest-spread-spacing": "error",
+    "semi": "error",
+    "no-console": "off",
+    "template-curly-spacing": "error",
+    "yield-star-spacing": "error",
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "react/jsx-boolean-value": 0,
+    "react/no-array-index-key": 0
+  }
+}
